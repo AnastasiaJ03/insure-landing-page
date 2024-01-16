@@ -1,0 +1,19 @@
+@use "./vars" as v;
+
+@mixin media-mobile {
+    @media (max-width: v.$bp-mobile) {
+        @content;
+    }
+}
+
+@mixin media-tablet {
+    @media (max-width: v.$bp-tablet) {
+        @content;
+    }
+}
+
+@mixin media-desktop {
+    @media (min-width: v.$bp-desktop) {
+        @content;
+    }
+}
