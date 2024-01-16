@@ -43,7 +43,7 @@
     </header>
     <main>
       <section class="hero">
-        <div class="container">
+        <div class="container hero__container">
           <div class="hero__inner">
             <div class="hero__left">
               <h1 class="hero__title">
@@ -60,12 +60,24 @@
             <div class="hero__right">
               <img src="./images/image-intro-desktop.jpg" alt="" />
             </div>
-            <img class="hero__pattern-right"
-              src="./images/bg-pattern-intro-right-desktop.svg"
+            <!-- <img
+              class="hero__pattern-right"
               alt=""
-              srcset=""
+              srcset="
+                ./images/bg-pattern-intro-right-mobile.svg  320w,
+                ./images/bg-pattern-intro-right-desktop.svg 768w
+              "
+              sizes="(max-width: 768px) 320px, (max-width:1000px) 440px,  768px"
             />
-            <img class="hero__pattern-left" src="./images/bg-pattern-intro-left-desktop.svg" alt="">
+            <img
+              class="hero__pattern-left"
+              alt=""
+              srcset="
+                ./images/bg-pattern-intro-left-mobile.svg  320w,
+                ./images/bg-pattern-intro-left-desktop.svg 768w
+              "
+              sizes="(max-width: 768px) 320px, (max-width:1000px) 440px,  768px"
+            /> -->
           </div>
         </div>
       </section>

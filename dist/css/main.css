@@ -127,6 +127,7 @@ select {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+  overflow: hidden;
 }
 
 .btn {
@@ -187,12 +188,37 @@ select {
   color: #fff;
   position: relative;
 }
+@media (max-width: 500px) {
+  .hero__container {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .hero__inner {
   display: flex;
 }
+@media (max-width: 768px) {
+  .hero__inner {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
 .hero__left {
-  padding-block-start: 15rem;
+  padding-block-start: 17rem;
+  padding-block-end: 8rem;
   max-width: 480px;
+}
+@media (max-width: 768px) {
+  .hero__left {
+    max-width: 350px;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .hero__left {
+    padding-block-start: 8rem;
+  }
 }
 .hero__left .btn--dark {
   background-color: hsl(256, 26%, 20%);
@@ -208,10 +234,20 @@ select {
   line-height: 1;
   margin-bottom: 1.5rem;
 }
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 4rem;
+  }
+}
 .hero__text {
   font-size: 1.6rem;
   color: hsla(0, 0%, 98%, 0.785);
   margin-bottom: 2.5rem;
+}
+@media (max-width: 768px) {
+  .hero__text {
+    font-size: 1.3rem;
+  }
 }
 .hero__right {
   flex: 1;
@@ -219,21 +255,21 @@ select {
 .hero__right img {
   display: block;
   width: 540px;
-  margin-top: 4rem;
+  margin-top: -4rem;
   position: relative;
   top: 122px;
   left: 24px;
 }
-.hero__pattern-right {
-  position: absolute;
-  top: 0;
-  right: 0;
+@media (max-width: 768px) {
+  .hero__right img {
+    width: 280px;
+  }
 }
-.hero__pattern-left {
-  position: absolute;
-  top: 100%;
-  translate: 0 -30%;
-  left: 0;
+@media (max-width: 500px) {
+  .hero__right img {
+    width: 100%;
+    position: static;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

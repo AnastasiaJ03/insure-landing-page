@@ -1,16 +1,39 @@
 @use "./vars" as v;
+@use "./mixins" as m;
 
 .hero {
     background-color: v.$violet;
     min-height: 60vh;
     color: #fff;
     position: relative;
+
+    &__container {
+        @include m.media-mobile {
+            max-width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
     &__inner {
         display: flex;
+        @include m.media-tablet {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
     }
     &__left {
-        padding-block-start: 15rem;
+        padding-block-start: 17rem;
+        padding-block-end: 8rem;
         max-width: 480px;
+        @include m.media-tablet {
+            max-width: 350px;
+            text-align: center;
+        }
+
+        @include m.media-mobile {
+            padding-block-start: 8rem;
+        }
+
         .btn--dark {
             background-color: v.$violet;
             color: #fff;
@@ -25,12 +48,18 @@
         font-weight: 600;
         line-height: 1;
         margin-bottom: 1.5rem;
+        @include m.media-tablet {
+            font-size: 4rem;
+        }
     }
 
     &__text {
         font-size: 1.6rem;
         color: hsla(0, 0%, 98%, 0.785);
         margin-bottom: 2.5rem;
+        @include m.media-tablet {
+            font-size: 1.3rem;
+        }
     }
     &__right {
         flex: 1;
@@ -38,20 +67,29 @@
     &__right img {
         display: block;
         width: 540px;
-        margin-top: 4rem;
+        margin-top: -4rem;
         position: relative;
         top: 122px;
         left: 24px;
+
+        @include m.media-tablet {
+            width: 280px;
+        }
+
+        @include m.media-mobile {
+            width: 100%;
+            position: static;
+        }
     }
-    &__pattern-right {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-    &__pattern-left {
-        position: absolute;
-        top: 100%;
-        translate: 0 -30%;
-        left: 0;
-    }
+    // &__pattern-right {
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    // }
+    // &__pattern-left {
+    //     position: absolute;
+    //     top: 100%;
+    //     translate: 0 -30%;
+    //     left: 0;
+    // }
 }
