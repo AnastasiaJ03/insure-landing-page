@@ -1,0 +1,58 @@
+@use "./vars" as v;
+@use "./mixins" as m;
+
+.pros {
+    font-size: 1.6rem;
+    &__inner {
+        h2 {
+            font-size: 5rem;
+            margin-bottom: 5rem;
+            @include m.media-tablet {
+                text-align: center;
+            }
+        }
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            @include m.media-tablet {
+                flex-direction: column;
+                justify-content: center;
+            }
+            .card {
+                &__inner {
+                    max-width: 320px;
+                    @include m.media-tablet {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    h3 {
+                        font-family: "DM Serif Display", serif;
+                        font-weight: 600;
+                        font-size: 2.5rem;
+                        margin-top: 2rem;
+                        margin-bottom: 2rem;
+                    }
+                    p {
+                        font-size: 1.6rem;
+                        color: rgba(111, 111, 111, 0.937);
+                        margin-bottom: 8rem;
+                        @include m.media-tablet {
+                            text-align: center;
+                            margin-bottom: 3rem;
+                        }
+                    }
+                    img {
+                        @include m.media-tablet {
+                            display: block;
+                            margin-inline: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
