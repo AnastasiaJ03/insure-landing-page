@@ -19,6 +19,14 @@
         ul {
             display: flex;
             gap: 1rem;
+            a {
+                display: inline-block;
+                &:hover {
+                    i {
+                        color: v.$mobile-menu;
+                    }
+                }
+            }
             i {
                 font-size: 1.8rem;
                 color: v.$links_color;
@@ -48,11 +56,15 @@
                     margin-top: 4rem;
                 }
             }
+
             li a {
                 color: v.$main_bg;
                 font-weight: 600;
                 letter-spacing: 1px;
                 margin-bottom: 1.6rem;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }

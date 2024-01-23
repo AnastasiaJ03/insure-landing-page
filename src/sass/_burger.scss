@@ -48,6 +48,7 @@
             position: absolute;
             top: 0;
             left: 0;
+            visibility: visible;
         }
 
         &::before {
@@ -56,6 +57,19 @@
 
         &::after {
             translate: 0 4px;
+        }
+    }
+    &.open {
+        .burger__line {
+            visibility: hidden;
+            &::before {
+                translate: 0;
+                rotate: 45deg;
+            }
+            &::after {
+                translate: 0;
+                rotate: -45deg;
+            }
         }
     }
 }

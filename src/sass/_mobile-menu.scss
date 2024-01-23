@@ -1,0 +1,32 @@
+@use "./vars" as v;
+@use "./mixins" as m;
+
+.mobile__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: v.$mobile-menu;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    &-list {
+        text-align: center;
+        padding-top: 10rem;
+        li {
+            margin-bottom: 2rem;
+        }
+        a {
+            font-family: "Karla", sans-serif;
+            color: #fff;
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+    }
+    &.open {
+        pointer-events: initial;
+        opacity: 1;
+    }
+}
